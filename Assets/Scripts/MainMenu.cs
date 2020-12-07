@@ -15,9 +15,10 @@ public class MainMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
+    /// / voidy do funkcji obsługujących guziki
     public void On_click_create_room()
     {
         PHOTONConnect.Click_create_room(room_name_input.text, 1);
@@ -26,4 +27,9 @@ public class MainMenu : MonoBehaviour
     {
         PHOTONConnect.Click_join_room(room_name_input.text, 1);
     }
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
+
 }
