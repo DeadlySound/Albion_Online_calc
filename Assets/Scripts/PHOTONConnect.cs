@@ -1,9 +1,10 @@
-﻿using Photon.Pun;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
+using Photon.Realtime;
 
-public class PHOTONConnect : MonoBehaviour
+public class PHOTONConnect : MonoBehaviourPunCallbacks
 {
     string game_version = "0.01";
     private void Awake()
@@ -29,7 +30,7 @@ public class PHOTONConnect : MonoBehaviour
     {
         if (room_name.Length >= 1)
         {
-            PhotonNetwork.CreateRoom(room_name, new Photon.Realtime.RoomOptions { MaxPlayers = 5 }, null);
+            PhotonNetwork.CreateRoom(room_name, new Photon.Realtime.RoomOptions { MaxPlayers = 3 }, null);
             PhotonNetwork.LoadLevel(level);
         }
     }
@@ -40,5 +41,27 @@ public class PHOTONConnect : MonoBehaviour
             PhotonNetwork.JoinRoom(room_name, null);
             PhotonNetwork.LoadLevel(level);
         }
+    }
+
+    public override void OnPlayerEnteredRoom(Photon.Realtime.Player player)
+    {
+        ListPlayer();
+    }
+    public override void OnJoinedRoom()
+    {
+        ListPlayer();
+    }
+    public override void OnPlayerLeftRoom(Photon.Realtime.Player otherPlayer)
+    {
+        ListPlayer();
+    }
+    public void ListPlayer()
+    {
+        List<string> lista = new List<string>();
+        foreach (var item in PhotonNetwork.PlayerList)
+        {
+            lista.Add(item.NickName);
+        }
+        Lobby.PlayerUpdateList(lista);
     }
 }
