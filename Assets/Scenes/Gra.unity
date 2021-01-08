@@ -264,7 +264,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: Player 1
 --- !u!222 &217059515
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -909,7 +909,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: 'Player 3
+
+'
 --- !u!222 &1064764201
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1308,7 +1310,6 @@ MonoBehaviour:
   - {fileID: 217059514}
   - {fileID: 1409350788}
   - {fileID: 1064764200}
-  lobby: {fileID: 206876899}
 --- !u!1 &1403185436
 GameObject:
   m_ObjectHideFlags: 0
@@ -1460,7 +1461,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: Player 2
 --- !u!222 &1409350789
 CanvasRenderer:
   m_ObjectHideFlags: 0

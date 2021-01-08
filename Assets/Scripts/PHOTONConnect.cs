@@ -29,15 +29,16 @@ public class PHOTONConnect : MonoBehaviourPunCallbacks
     }
     static public void Click_create_room(string room_name, int level)
     {
-        if (room_name.Length >= 1)
+        if (room_name.Length >= 1 && PhotonNetwork.NetworkClientState == ClientState.ConnectedToMasterServer)
         {
+
             PhotonNetwork.CreateRoom(room_name, new Photon.Realtime.RoomOptions { MaxPlayers = 3 }, null);
             PhotonNetwork.LoadLevel(level);
         }
     }
     static public void Click_join_room(string room_name, int level)
     {
-        if (room_name.Length >= 1)
+        if (room_name.Length >= 1 && PhotonNetwork.NetworkClientState == ClientState.ConnectedToMasterServer)
         {
             PhotonNetwork.JoinRoom(room_name, null);
             PhotonNetwork.LoadLevel(level);

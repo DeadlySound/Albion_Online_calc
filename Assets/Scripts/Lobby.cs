@@ -10,7 +10,7 @@ public class Lobby : MonoBehaviour
 {
     public Text[] pom = new Text[0];
     public static Text[] playerT = new Text[3];
-    public GameObject lobby;
+    public static GameObject lobby;
     //public GameManager manager; 
 
     void Update()
@@ -29,6 +29,7 @@ public class Lobby : MonoBehaviour
         {
             playerT[i] = pom[i];
         }
+        lobby = GameObject.Find("Lobby");
     }
 
     public static void PlayerUpdateList(List<string> playerList)
@@ -47,6 +48,11 @@ public class Lobby : MonoBehaviour
     }
 
     public void StartButton()
+    {
+        GameManager.instance.GetComponent<PhotonView>().RPC("StartGame", RpcTarget.AllBuffered);
+    }
+
+    public static void HideLobbyScreen()
     {
         lobby.SetActive(false);
     }
