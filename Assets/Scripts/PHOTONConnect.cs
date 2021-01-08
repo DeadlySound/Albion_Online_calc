@@ -9,6 +9,7 @@ public class PHOTONConnect : MonoBehaviourPunCallbacks
     string game_version = "0.01";
     private void Awake()
     {
+        GoToFirstScene.scene = true;
         DontDestroyOnLoad(gameObject);
     }
     void Start()

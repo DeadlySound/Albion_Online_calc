@@ -9,7 +9,7 @@ using Photon.Realtime;
 public class Lobby : MonoBehaviour
 {
     public Text[] pom = new Text[0];
-    public static Text[] playerT = new Text[4];
+    public static Text[] playerT = new Text[3];
     public GameObject lobby;
     //public GameManager manager; 
 
@@ -49,7 +49,5 @@ public class Lobby : MonoBehaviour
     public void StartButton()
     {
         lobby.SetActive(false);
-
-        //manager.DajKarte();
     }
 }
