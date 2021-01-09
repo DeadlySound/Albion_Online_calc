@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class CreatePhotonManager : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class CreatePhotonManager : MonoBehaviour
     {
         if (!FindObjectOfType<PHOTONConnect>())
         {
-            Instantiate(photonManagerPrefab);
+            Instantiate(photonManagerPrefab).GetPhotonView().ViewID = 1;
         }
     }
 }
