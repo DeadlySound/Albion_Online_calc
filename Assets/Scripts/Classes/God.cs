@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class God: MonoBehaviour
 {
-    public string Name { get; }
+    public string Name { get; set; }
     // TODO change the player variable to Player object
     [CanBeNull] public string _playerWithHighestBid { get; }
     public int CurrentBid { get; set; }
