@@ -11,7 +11,6 @@ public class Lobby : MonoBehaviour
     public Text[] pom = new Text[0];
     public static Text[] playerT = new Text[3];
     public static GameObject lobby;
-    //public GameManager manager; 
 
     void Update()
     {
