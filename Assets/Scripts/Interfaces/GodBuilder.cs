@@ -10,4 +10,5 @@ public interface GodBuilder
     void addRecruitMethod();
     void addBuildMethod();
     void addSpecialActionMethod();
+    public God ReturnBuiltGod();
 }

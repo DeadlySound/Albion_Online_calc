@@ -26,4 +26,9 @@ public class ZeusConcreteBuilder : GodBuilder
     {
 
     }
+
+    public God ReturnBuiltGod()
+    {
+        return Zeus;
+    }
 }

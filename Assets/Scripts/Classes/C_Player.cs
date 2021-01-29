@@ -7,12 +7,12 @@ using UnityEngine;
 public class C_Player : MonoBehaviour
 {
     public uint Gold = 5;
-    public uint PreistCardCount = 0;
+    public uint PriestCardCount = 0;
     public uint PhilosopherCardCount = 0;
-   //TODO dodac publicznego God GodForThisRound
-    
 
-    public void RiseBid() 
-    { }
 
+    public void RaiseBid()
+    {
+        throw new NotImplementedException();
+    }
 }

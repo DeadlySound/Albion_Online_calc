@@ -26,4 +26,9 @@ public class AthenaConcreteBuilder : GodBuilder
     {
 
     }
+
+    public God ReturnBuiltGod()
+    {
+        return Athena;
+    }
 }

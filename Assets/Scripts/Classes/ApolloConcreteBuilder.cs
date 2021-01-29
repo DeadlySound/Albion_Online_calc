@@ -26,4 +26,9 @@ public class ApolloConcreteBuilder : GodBuilder
     {
 
     }
+
+    public God ReturnBuiltGod()
+    {
+        return Apollo;
+    }
 }

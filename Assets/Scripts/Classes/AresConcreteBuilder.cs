@@ -26,4 +26,9 @@ public class AresConcreteBuilder : GodBuilder
     {
 
     }
+
+    public God ReturnBuiltGod()
+    {
+        return Ares;
+    }
 }

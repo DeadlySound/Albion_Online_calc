@@ -26,4 +26,9 @@ public class PoseidonConcreteBuilder : GodBuilder
     {
 
     }
+
+    public God ReturnBuiltGod()
+    {
+        return Poseidon;
+    }
 }
